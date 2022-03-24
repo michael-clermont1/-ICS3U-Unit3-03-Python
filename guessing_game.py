@@ -4,7 +4,7 @@
 # Created on: Mar 2022
 # This program is a guessing game
 
-import constants
+import random
 
 
 def main():
@@ -12,14 +12,13 @@ def main():
 
     # input
     number_from_user = int(input("Enter a number between 0-9: "))
-
+    random_number = random.randint(1, 9)
     # process & output
     print("")
-    if number_from_user == constants.number:
+    if number_from_user == random_number:
         print("You guessed correctly!")
-    if number_from_user != constants.number:
-        print("You guessed incorrectly :(")
-
+    else:
+        print("You guessed incorrectly!")
     print("\nDone.")
 
 
